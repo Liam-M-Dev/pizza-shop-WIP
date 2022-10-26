@@ -1,5 +1,89 @@
-body {
+*, *::before, *::after {
   margin: 0;
+  padding: 0;
   border: 0;
   box-sizing: border-box;
 }
+
+// Variables
+$primary-color: rgb(217, 19, 19);
+$secondary-color: rgb(247, 247, 23);
+
+@mixin head-foot {
+  background-color: $primary-color;
+  border-top: $secondary-color solid 5px;
+  border-bottom: $secondary-color solid 5px;
+}
+
+@mixin links {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+header {
+  background-color: $primary-color;
+  align-self: stretch;
+  
+  .logo-image {
+  width: 200px;
+  height: 100%;
+  margin-top: 10px;
+  margin-left: 25%;
+  margin-bottom: 0px;
+  }
+
+}
+
+.navbar {
+  @include head-foot();
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  li {
+    @include links();
+    list-style: none;
+    color: black;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+footer {
+  @include head-foot();
+  align-self: stretch;
+}
+
+.socials {
+  a {
+    @include links();
+  }
+}
+
+
+main {
+  width: 100vw;
+  .front-decal {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 20px;
+    img{
+      width: 150px;
+      height: auto;
+    }
+  }
+}
+
+// img {
+//   width: 150px;
+//   height: auto;
+// }

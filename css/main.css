@@ -1,5 +1,71 @@
-body {
+*, *::before, *::after {
   margin: 0;
+  padding: 0;
   border: 0;
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+header {
+  background-color: rgb(217, 19, 19);
+  align-self: stretch;
+}
+header .logo-image {
+  width: 200px;
+  height: 100%;
+  margin-top: 10px;
+  margin-left: 25%;
+  margin-bottom: 0px;
+}
+
+.navbar {
+  background-color: rgb(217, 19, 19);
+  border-top: rgb(247, 247, 23) solid 5px;
+  border-bottom: rgb(247, 247, 23) solid 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+.navbar li {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  list-style: none;
+  color: black;
+}
+.navbar a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: rgb(217, 19, 19);
+  border-top: rgb(247, 247, 23) solid 5px;
+  border-bottom: rgb(247, 247, 23) solid 5px;
+  align-self: stretch;
+}
+
+.socials a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+main {
+  width: 100vw;
+}
+main .front-decal {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 20px;
+}
+main .front-decal img {
+  width: 150px;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */
