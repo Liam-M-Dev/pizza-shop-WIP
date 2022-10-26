@@ -30,6 +30,11 @@ $secondary-color: rgb(247, 247, 23);
   flex-direction: column;
 }
 
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 body {
   display: flex;
   flex-flow: column wrap;
@@ -39,18 +44,24 @@ body {
 }
 
 header {
+  @include flex-col();
   background-color: $primary-color;
   align-self: stretch;
-  
+  justify-content: center;
+  align-items: center;  
   .logo-image {
-  width: 200px;
-  height: 100%;
-  margin-top: 10px;
-  margin-left: 25%;
-  margin-bottom: 0px;
+    width: 150px;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 0px;
   }
-
+  
+  .nav-container {
+    width: 100%;
+  }
 }
+
+
 
 .navbar {
   @include head-foot();
@@ -58,6 +69,7 @@ header {
   flex-flow: row nowrap;
   justify-content: space-evenly;
   padding: 20px;
+  width: 100%;
   li {
     @include links();
     list-style: none;
@@ -92,6 +104,7 @@ main {
   justify-content: space-evenly;
   align-items: center;
   width: 100vw;
+  height: 100vh;
   flex-grow: 1;
   .tagline{
     margin-left: 10px;
@@ -118,5 +131,33 @@ main {
     border: $secondary-color solid 2px;
     border-radius: 50%;
     font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .navbar{
+    li{
+      font-size: 40px;
+    }
+  }
+  
+  main {
+    .tagline{
+      margin-left: 100px;
+      margin-right: 100px;
+      font-size: 33px;
+    }
+    .front-decal{
+      height: 50%;
+      img {
+        width: 40%;
+      height: auto;
+      object-fit: contain;
+      }
+    }
+    button {
+      padding: 50px;
+      font-size: 30px;
+    }
   }
 }
