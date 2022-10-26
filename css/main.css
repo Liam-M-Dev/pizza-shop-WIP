@@ -10,6 +10,7 @@ body {
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-start;
+  min-height: 100vh;
 }
 
 header {
@@ -31,6 +32,7 @@ header .logo-image {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
+  padding: 20px;
 }
 .navbar li {
   text-decoration: none;
@@ -38,6 +40,7 @@ header .logo-image {
   font-weight: 700;
   list-style: none;
   color: black;
+  font-size: 20px;
 }
 .navbar a {
   text-decoration: none;
@@ -47,17 +50,36 @@ footer {
   background-color: rgb(217, 19, 19);
   border-top: rgb(247, 247, 23) solid 5px;
   border-bottom: rgb(247, 247, 23) solid 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   align-self: stretch;
+  height: 50px;
 }
 
+.socials {
+  margin-top: 10px;
+}
 .socials a {
   text-decoration: none;
   color: black;
   font-weight: 700;
+  margin-right: 5px;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100vw;
+  flex-grow: 1;
+}
+main .tagline {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
 }
 main .front-decal {
   display: flex;
@@ -68,4 +90,12 @@ main .front-decal {
 main .front-decal img {
   width: 150px;
   height: auto;
+}
+main button {
+  padding: 20px;
+  background-color: rgb(217, 19, 19);
+  color: rgb(247, 247, 23);
+  border: rgb(247, 247, 23) solid 2px;
+  border-radius: 50%;
+  font-size: 20px;
 }/*# sourceMappingURL=main.css.map */
