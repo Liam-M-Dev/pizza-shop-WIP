@@ -37,6 +37,7 @@ header .logo-image {
 .navbar li {
   text-decoration: none;
   color: black;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   list-style: none;
   color: black;
@@ -64,6 +65,7 @@ footer {
 .socials a {
   text-decoration: none;
   color: black;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   margin-right: 5px;
 }
@@ -79,7 +81,10 @@ main {
 main .tagline {
   margin-left: 10px;
   margin-right: 10px;
-  font-size: 20px;
+  font-size: 25px;
+  line-height: 1;
+  font-family: "Freehand", cursive;
+  border-bottom: 2px solid rgb(217, 19, 19);
 }
 main .front-decal {
   display: flex;

@@ -21,6 +21,7 @@ $secondary-color: rgb(247, 247, 23);
 @mixin links {
   text-decoration: none;
   color: black;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
@@ -95,7 +96,10 @@ main {
   .tagline{
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 25px;
+    line-height: 1;
+    font-family: 'Freehand', cursive;
+    border-bottom: 2px solid $primary-color;
   }
   .front-decal {
     display: flex;
